@@ -1,0 +1,174 @@
+
+body {
+  text-align: center;
+  background-color:rgb(179, 184, 185);
+  margin: 0;
+  min-height: 100%;
+  display:flex; 
+  flex-direction:column; 
+  height: 100vh;
+  
+  
+  
+}
+
+h1 {
+  
+  margin-top: 50px;
+  
+}
+
+form {
+  text-align: left;
+  width:250px;
+  margin: 30px auto ;
+}
+
+ /*footer*/
+footer {
+  clear: both;
+  position: relative;
+  min-height : 200px;
+  margin-top:auto;
+  
+}
+
+.icons {
+  margin: 0 auto;
+  padding: 0
+ }
+
+ .copyRight{
+   background-color: rgba(0, 0, 0, 0.2);
+    margin: auto;
+ }
+
+ .contant {
+  min-height: 100%;
+  margin-bottom:250px
+ }
+
+/*home*/
+.carousel-inner > .item > img {
+  width:640px;
+  height:360px;
+}
+.carousel {
+  
+  width:300px;
+  height: auto;
+  margin: 20px auto 200px;
+}
+
+/*addUser*/
+
+form.addUser {
+  margin: 0 auto;
+  text-align: center
+}
+
+.card {
+  margin: 20px auto;
+  width:auto;
+  
+}
+
+/*all users*/
+.Permissions {
+  text-align: left;
+  width:180px;
+  margin: auto;
+}
+
+
+.login{
+  text-align: center;
+  width: auto;
+  background-color: rgb(44, 199, 230);
+  
+}
+
+.form-control:focus {
+  border-color: #414242;
+  box-shadow: 0 0 0 0.2rem #4142425e;;
+} 
+input {
+  margin: 5px;
+}
+
+.addMemeber {
+  text-align: left;
+  width: 40px;
+}
+
+.addMovie {
+  text-align: left;
+  width: 200px;
+}
+
+.addMovie>input {
+  margin:0
+}
+
+.watchedMovies {
+  text-align: left;
+}
+
+
+.indentation {
+  margin-left: 30px;
+}
+
+ul {
+  padding: 0; 
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+.btn {
+ margin: 10px;
+}
+
+.moviesSelectionItems {
+  width: 150px;
+  margin:   10px;
+  padding: 0;
+}
+
+.moviesSelectionForm{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.btnSort{
+  margin-right: 25px;
+}
+
+.bg {
+  background-color: white;
+  opacity: 0.5;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  z-index: 1;
+ 
+  }
+  input {
+  position: relative;
+  z-index: 2;
+  }
+
+  #ViewSubscriptionsbg {
+    margin-top: 5px;
+    margin-left: 50px;
+  }
+
+  #ViewMoviesbg {
+    margin-top: 5px;
+    margin-left: 72px;
+  }
+
+
+
+

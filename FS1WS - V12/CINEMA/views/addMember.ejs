@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+    
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+    <h1>Subscriptions</h1>
+    <h3>Add Member</h3>
+    <form action="/subs/saveMember" method="post" class="addUser">
+
+      <% let member = {} %>
+      <%- include('../tamplates/subData.ejs' , {member, add: true}) %>
+      <input type="submit"  value="save">
+
+      <form action="/subs" method="get">
+        <input type="submit" value="cancel" >
+      </form> 
+      
+    </form>
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

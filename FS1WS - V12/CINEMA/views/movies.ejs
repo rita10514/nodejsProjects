@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+   
+    <%- include('../tamplates/head.html') %>
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+    <%- include('../tamplates/searchBar.ejs') %>
+    
+    <h1>Movies</h1>
+
+    <h2>All Movies:</h2>
+    
+
+
+<br>
+    <% movies.forEach( x => { %>      
+      <div class="card" style="width: 30rem; " id="<%= x.id%>">
+        <div class="card-body">
+          
+          <h5 class="card-title text-primary"><%= x.Name %> , <%= x.Premiered.split("-")[0] %> </x.Year></h5>
+          <h6 class="card-subtitle mb-2 text-primary">genres: <%= x.Genres %> </h6><br>
+          <p class="card-text">
+
+            <img src= "<%= x.Image%>" alt="" style = "width: 200px; float: left;">
+            
+            <div style = "text-align: left; width: 220px; float: right;" >
+              <p> Subscribed to this movie: </p>
+              
+              <% x.Subs.forEach( y => { %>
+                <li><a href="/subs/item/<%= y.id%>"><%= y.Name %> </a><%= y.date %></li>
+              <% }) %>
+              <br>
+              <% if(per.includes("Update Movies")){ %>
+              <a style = "margin: 0;" href="/movies/editMovie/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">edit</a>
+              <%}%>
+
+              <% if(per.includes("Delete Movies")){ %>
+              <a style = "margin: 0;" href="/movies/deleteMovie/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">delete</a>
+              <%}%>
+            </div><br>
+
+           
+
+            
+           </div>
+          </p>
+        </div>
+      </div>
+      <div>
+    <% }) %>
+    
+
+    
+   
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

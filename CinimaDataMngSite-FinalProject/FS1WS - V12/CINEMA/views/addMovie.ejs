@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+    
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+    <h1>Movies</h1>
+    <h3>Add Movie</h3>
+    
+    <form action="/movies/saveMovie" method="post" class="addMovie">
+
+      <% let movie = {} %>
+      
+      <%- include('../tamplates/movieData.ejs' , {movie, add: true}) %>
+      <input type="submit"  value="save">
+
+      <form action="/Movies" method="get">
+        <input type="submit" value="cancel" >
+      </form> 
+      
+    </form>
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

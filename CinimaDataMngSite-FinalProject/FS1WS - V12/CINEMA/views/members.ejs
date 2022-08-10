@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+    <%- include('../tamplates/header.ejs') %>
+    <script>
+      
+      function hideShow(id) {
+          var x = id;
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+
+      function reload(container) {
+        var content = container.innerHTML;
+        container.innerHTML= content; 
+      }
+
+    </script>
+  </head>
+  <body>
+    
+    <h1>Subscriptions</h1>
+
+    <h2>All Subscriptions</h2>
+    
+      <% function exists(member,movie){ %>
+        <% let ans = true %>
+        <% member.Movies.forEach(e => { %>
+          <%  if(e.movieId == movie._id.toString()){ans=false} %>
+        <% }) %>
+        <% return ans %>
+      <% } %>
+  
+
+      <% members.forEach( x => { %>
+      <% let unsubMovies = allMovies.filter(m => exists(x,m)) %>
+      
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-primary"><%= x.Name %> </h5>
+          <h6 class="card-subtitle mb-2 text-primary">Email: <%= x.Email %> </h6>
+          <h6 class="card-subtitle mb-2 text-primary">City: <%= x.City %> </h6>
+          <div>
+            <div class="watchedMovies">
+                <span class="watchedMovies indentation" style = "font-weight: bold;" > Watched Movies: </span><br>
+              <%  if(x.Movies.length == 0){ %>
+                  <span class="indentation" >no movies watched yet</span><br><br>
+              <%  } else{ %>
+                
+                  <% x.Movies.forEach( y => { %>
+                    <ul >
+                      <li class="indentation"><a href="/movies/item/<%= y.movieId %>"><%= y.Name %></a> <%= y.Date %></li>
+                    </ul>
+                  <% }) %>
+              <% } %>
+              </div> 
+             <% let OCHS = "hideShow(" + "addMovie2sub" + x.id + ")" %>
+             <% let OCreload = "reload(" + "addMovie2sub" + x.id + ")" %>
+               <button onclick= "<%= OCHS %>"  class="btn btn-outline-secondary">Subscribe to new movie</button>
+               <% let selectionId = "addMovie2sub"+ x.id  %>
+
+               <form action="/subs/addMovie2sub/<%= x.id %>" method="post" id = "<%= selectionId %>" class = "moviesSelectionForm" style="display: none" >
+                <select name="movieId"  id="movieId" class=" mdb-select md-form moviesSelectionItems" placeholder="Search here.."> 
+                  
+                  <% unsubMovies.forEach (y => { %>
+                    
+                    <option name="movieId" id = "<%= y._id %>" value="<%= y._id %>"><%= y.Name %></option>
+                  <% }) %>
+                     
+                </select>
+                
+                <% var today = new Date(); %>
+                <% let tempMonth = (today.getMonth()+1).toString() %>
+                <% let month = ((tempMonth.length < 2) ? '0' + tempMonth : tempMonth) %>
+                <% var min = today.getFullYear()+'-'+month+'-'+today.getDate(); %>
+                <label for="date"></label><br>
+                <input  class ="moviesSelectionItems" type="date" name="date" id="date"  placeholder="<%= min %>" value="<%= min %>" min="<%= min %>" >
+                <input class ="moviesSelectionItems" type="submit" value="Subscribe">
+               </form>
+
+            </div>
+            <% if(per.includes("Update Subscriptions")){ %>
+            <a href="subs/editSub/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">edit</a>
+            <%}%>
+            <% if(per.includes("Delete Subscriptions")){ %>
+            <a href="subs/deleteSub/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">delete</a>
+            <%}%>
+           </div>
+          
+        </div>
+      </div>
+      <div>
+    <% }) %>
+    
+
+    
+   
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

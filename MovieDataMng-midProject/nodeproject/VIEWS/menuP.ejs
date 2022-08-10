@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Menu Page</h1>
+
+    <a href="menu/searchMovieM">Search Movies</a><br>
+    <a href="menu/createMovieM">Create Movie</a><br>
+
+    <% if(admin){ %>
+    <a href="menu/editUsersM">Edit Users</a><br><br>
+    <% } %>
+
+    <form action="login/logout">
+      <input type="submit" value="logout" />
+    </form>
+
+
+
+  </body>
+</html>

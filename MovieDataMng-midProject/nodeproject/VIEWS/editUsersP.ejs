@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Users Management Page</h1>
+
+    <% users.forEach(user => {%>
+      <p><%= user.username %> &nbsp <a href="editUsers/update/<%= user.id%>">update</a>&nbsp&nbsp
+                              <a href="editUsers/delete/<%= user.id%>">delete</a></p>  
+    <% }) %>
+    <a href="editUsers/addNewUser">add new user</a><br><br>
+    <a href="/menu">back to menu</a>
+
+  </body>
+</html>

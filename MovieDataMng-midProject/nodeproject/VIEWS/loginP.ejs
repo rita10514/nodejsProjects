@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <form action="login/userData" method="post">
+      User Name: <input type="text" name = "username"><br>
+      Password: <input type="text"  name = "psw" ><br>
+      <input type="submit" value="login">
+    </form>
+    <br>
+    <div>
+      <%= loginMsg %>
+    </div>
+  </body>
+</html>

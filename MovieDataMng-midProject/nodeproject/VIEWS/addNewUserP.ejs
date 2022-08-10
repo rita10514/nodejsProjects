@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%=title%> Page</h1>
+
+    <% let path = "/editUsers/addNewUserData" %>
+    <% if( title == "Update User"){ %>
+      <% path = "/editUsers/updateData/"+user.id %>
+    <% } %>
+
+    <form action="<%= path %>" method='post'>
+      User Name: <input type="text" name="username" value="<%= user.username %>"><br>
+      Password: <input type="text" name="psw" value="<%= user.psw %>"><br>
+      Number Of Transactions: <input type="number" name="numOfTransactions" value="<%=user.numOfTransactions %>"><br><br>
+      Admin? <input type="checkbox" name="admin" id="">
+      <input type="submit" value="save">
+
+    </form>
+
+
+
+    
+
+  </body>
+</html>

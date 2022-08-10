@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>search Movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>search Movie Page</h1>
+    Search by: <br><br>
+    <form action="searchMovie/searchMovieData" , method='post'>
+      Name: <input type="text" name = "name"><br><br>
+      Genre: 
+      <select name="genre" id="genre">
+        <option value="All">All</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Romance">Romance</option>
+        <option value="Sci-fi">Sci-fi</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedy">Comedy</option>
+      </select> <br><br>
+      Language: 
+      <select name="language" id="language">
+        <option value="All">All</option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Hebrew">Hebrew</option>
+        <option value="Japanese">Japanese</option>
+      </select> <br><br>
+      <input type="submit" value="Search">
+    </form><br><br>
+    <a href="/menu">back to menu</a>
+  </body>
+</html>

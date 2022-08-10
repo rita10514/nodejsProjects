@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>create movie Page</h1>
+    <form action="createMovie/createMovieData" , method='post'>
+      Name: <input type="text" name= "name"><br><br>
+      Language: 
+        <select name="language" id="language">
+          <option value="English">English</option>
+          <option value="French">French</option>
+          <option value="Hebrew">Hebrew</option>
+          <option value="Japanese">Japanese</option>
+        </select> <br><br>
+      Genres: <br>
+        <input type="checkbox" value ="Fantasy" name= genres[] >fantasy<br>
+        <input type="checkbox" value ="Romance" name= genres[]>romance<br>
+        <input type="checkbox" value ="Sci-fi" name=genres[]>sci-fi<br>
+        <input type="checkbox" value ="Drama" name=genres[]>drama<br>
+        <input type="checkbox" value ="Comedy" name=genres[]>comedy<br><br>
+      Premiered: <br>
+        <input type="date" name="premiered" id=""><br><br>
+      <input type="submit" value="Create">
+    </form><br><br>
+    <a href="/menu">back to menu</a>
+
+  </body>
+</html>

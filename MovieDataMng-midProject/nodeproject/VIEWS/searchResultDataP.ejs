@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>search Movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Movie Data Page</h1>
+    ID: <%= movieById.id %> <br>
+    Name: <%= movieById.name %> <br>
+    Genres: <%= movieById.genres %> <br>
+    Language: <%= movieById.language %> <br>
+    Premiered: <%= movieById.premiered %> <br>
+    <% if( movieById.image != undefined){ %>
+      <img src="<%= movieById.image.medium %>" alt=""><br>
+    <% } %>
+
+    <a href="/searchMovie">search another movie</a>&nbsp&nbsp
+    <a href="javascript:history.back()">Back</a>&nbsp&nbsp
+    <a href="/menu">Back to Menu</a>
+    
+    
+
+  </body>
+</html>

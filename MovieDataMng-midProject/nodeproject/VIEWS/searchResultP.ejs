@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>search Movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>search Result Page</h1>
+    
+    <table border=1>
+      
+      <% result.forEach(movie => { %>
+      <tr>
+        <td><a href="/searchMovie/<%= movie.id %>"><%= movie.name %></a></td>
+        
+        <td>
+            <% let moviesBygenres = allData.filter(x => x.genres.some(y => movie.genres.includes(y))) %>
+            <%let sordetMovies = moviesBygenres.sort(function(a, b){var x = a["premiered"]; var y = b["premiered"]; %>
+            <% return ((x > y) ? -1 : ((x < y) ? 1 : 0)); %>
+            <%})%> 
+            <%let sordetMoviesSliced = sordetMovies.filter(x => x.name != movie.name).slice(0,5)%>
+
+            <% sordetMoviesSliced.forEach(movie => { %> 
+            <P><%= movie.name %></P>
+            <% }) %></td>
+        </td>
+      </tr>
+      <% }) %>
+    </table><br>
+    <a href="/searchMovie">search another movie</a>
+    <a href="/menu">Back to Menu</a>
+  </body>
+</html>

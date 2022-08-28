@@ -1,4 +1,4 @@
-Node.JS Cinima Data Management
+Node.JS Cinema Data Management
 ============
 This is a node.js web site for cinema employees where they can mange members and movies data. each employee have individualized permetions to add, update and delete movies, subscribers and employees.
 

@@ -21,23 +21,17 @@ This is a node.js web site for cinema employees where they can mange members and
 ---
 
 ## Setup
-create users mongoDB database that looks like this:
+Create mongoDB database called usersDB and add a user as shown below:
 
-![users](https://i.imgur.com/rssibm1.png)
+![usersDB](https://i.imgur.com/rssibm1.png)
 
-you need to create the user as shown above.
+Go to CINEMA\data\users.json and change the user id according to your database.
 
-go to CINEMA\data\users.json and change the user id according to your database.
+Create a mongoDB database called cinemaDB with the 3 following collections:
 
-create a Cinema mongoDB database that looks like this:
+![CinemaDB](https://i.imgur.com/zlKjvhZ.png) 
 
-![members](https://i.imgur.com/0L8lamo.png) 
-
-![movies](https://i.imgur.com/P0WvBGD.png)  
-
-![subs](https://i.imgur.com/tAvuaXp.png)
-
-I used Robo 3T for this.
+You can use Robo 3T for this.
 
 This project consists of two directories: client side and Rest-API, both need to run at the same time.
 Open each directory in VS Code, cd to the root directory if needed and run `npm install` for each, to install all the dependencies.
@@ -46,16 +40,17 @@ Open each directory in VS Code, cd to the root directory if needed and run `npm 
 
 ## Usage
 Once the dependencies are installed, you can run  `npm start` on each VS code window ,to start the application. You will then be able to access it at localhost:3000.
+On the login page click on "create acount" and choose a password for the username you creted in the usees database.
+Now you can login with those username and password. 
 
-login with: username: rita1, password: 1234
+<p align="center">
+<img height="300"  src="https://i.imgur.com/CoQ0X1x.png">
+<img height="300"  src="https://i.imgur.com/vwK8Qfu.png">
+</p>
 
 ---
 
 ## Preview
-![Imgur](https://i.imgur.com/ZYMYtSJl.gifv)
+https://giphy.com/channel/rita10514/preview
 
-![Imgur](https://i.imgur.com/HKdcG18l.gif)
 
-![userMngP](https://i.imgur.com/gH7Rp3d.gif)
-
-![subsP](https://i.imgur.com/0elMnxa.gif)

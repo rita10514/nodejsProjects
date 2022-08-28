@@ -43,10 +43,10 @@ Once the dependencies are installed, you can run  `npm start` on each VS code wi
 On the login page click on "create acount" and choose a password for the username you creted in the usees database.
 Now you can login with those username and password. 
 
-<p align="center">
-<img height="300"  src="https://i.imgur.com/CoQ0X1x.png">
-<img height="300"  src="https://i.imgur.com/vwK8Qfu.png">
-</p>
+<div align="center">
+  <img align=center height="300"  src="https://i.imgur.com/CoQ0X1x.png">&nbsp &nbsp
+  <img align=center height="200"  src="https://i.imgur.com/vwK8Qfu.png">
+</div>
 
 ---
 

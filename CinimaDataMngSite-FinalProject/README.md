@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+Node.JS Cinima Data Management
+============
+This is a node.js web site for cinema employees where they can mange members and movies data. each employee have individualized permetions to add, update and delete movies, subscribers and employees.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Features
+- add, update and delete data
+- acssecc managment
+- search and sort movies
+- login (only existing users can login)
+- route protection using sessions
+- includes outomatic logout after a period of time that is predetermend indevidually for each user
 
-In the project directory, you can run:
+#### Data Structure:
+- **External Rest-APIs:** initial members and movies data
+- **Json Files:** users and promissions (first user (employee) will always be with all permissions)
+- **Rest-API:** manages a mongoDB database with 3 collections:
+                users, members (initiated with the external APIs) and subs  
+- mongoDB database of users(employees)                
+---
 
-### `npm start`
+## Setup
+create users mongoDB database that looks like this:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![users](https://i.imgur.com/rssibm1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+you need to create the user as shown above.
 
-### `npm test`
+go to CINEMA\data\users.json and change the user id according to your database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+create a Cinema mongoDB database that looks like this:
 
-### `npm run build`
+![members](https://i.imgur.com/0L8lamo.png) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![movies](https://i.imgur.com/P0WvBGD.png)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![subs](https://i.imgur.com/tAvuaXp.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I used Robo 3T for this.
 
-### `npm run eject`
+This project consists of two directories: client side and Rest-API, both need to run at the same time.
+Open each directory in VS Code, cd to the root directory if needed and run `npm install` for each, to install all the dependencies.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
+Once the dependencies are installed, you can run  `npm start` on each VS code window ,to start the application. You will then be able to access it at localhost:3000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+login with: username: rita1, password: 1234
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Previews
+![home](https://i.imgur.com/XAI2wRG.png) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![moviesP](https://i.imgur.com/bugA69U.png)  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![userMngP](https://i.imgur.com/wRnlkT3.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![subsP](https://i.imgur.com/DsuaSdv.png)

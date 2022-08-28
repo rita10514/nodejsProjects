@@ -44,8 +44,8 @@ On the login page click on "create acount" and choose a password for the usernam
 Now you can login with those username and password. 
 
 <div align="center">
-  <img align=center height="300"  src="https://i.imgur.com/CoQ0X1x.png">&nbsp &nbsp
-  <img align=center height="200"  src="https://i.imgur.com/vwK8Qfu.png">
+  <img align=center height="300"  src="https://i.imgur.com/uNQQnEn.png">&nbsp &nbsp
+  <img align=center height="250"  src="https://i.imgur.com/vwK8Qfu.png">
 </div>
 
 ---

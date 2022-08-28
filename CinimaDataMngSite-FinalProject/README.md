@@ -52,10 +52,10 @@ login with: username: rita1, password: 1234
 ---
 
 ## Preview
-![home](https://i.imgur.com/ZYMYtSJ.gifv) 
+![Imgur](https://i.imgur.com/ZYMYtSJl.gifv)
 
-![moviesP](https://i.imgur.com/HKdcG18.gifv)  
+![Imgur](https://i.imgur.com/HKdcG18l.gif)
 
-![userMngP](https://i.imgur.com/gH7Rp3d.gifv)
+![userMngP](https://i.imgur.com/gH7Rp3d.gif)
 
-![subsP](https://i.imgur.com/0elMnxa.gifv)
+![subsP](https://i.imgur.com/0elMnxa.gif)

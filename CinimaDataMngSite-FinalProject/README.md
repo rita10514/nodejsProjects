@@ -25,6 +25,8 @@ Create mongoDB database called usersDB and add a user as shown below:
 
 ![usersDB](https://i.imgur.com/rssibm1.png)
 
+This will be the Admin of the web site.
+
 Go to CINEMA\data\users.json and change the user id according to your database.
 
 Create a mongoDB database called cinemaDB with the 3 following collections:
@@ -40,8 +42,11 @@ Open each directory in VS Code, cd to the root directory if needed and run `npm 
 
 ## Usage
 Once the dependencies are installed, you can run  `npm start` on each VS code window ,to start the application. You will then be able to access the web site at localhost:3000.
-On the login page click on "Sign Up" and choose a password for the username you created in the users database.
-Now you can login with those username and password. 
+Now you can login with the username and password according to your users database. 
+
+When the Admin adds a new user, he desides what will be his username. 
+
+When the new employee wants to log in he first need to sign up by clicking on "Sign Up" On the login page. Then he chooses a password for the username he resived from the admin. After the sign up he can now login.
 
 <div align="center">
   <img align=center height="300"  src="https://i.imgur.com/uNQQnEn.png">&nbsp &nbsp

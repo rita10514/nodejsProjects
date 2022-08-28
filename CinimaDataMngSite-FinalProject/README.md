@@ -51,7 +51,7 @@ login with: username: rita1, password: 1234
 
 ---
 
-## Previews
+## Preview
 ![home](https://i.imgur.com/XAI2wRG.png) 
 
 ![moviesP](https://i.imgur.com/bugA69U.png)  

@@ -39,7 +39,7 @@ Open each directory in VS Code, cd to the root directory if needed and run `npm 
 ---
 
 ## Usage
-Once the dependencies are installed, you can run  `npm start` on each VS code window ,to start the application. You will then be able to access it at localhost:3000.
+Once the dependencies are installed, you can run  `npm start` on each VS code window ,to start the application. You will then be able to access the web site at localhost:3000.
 On the login page click on "create acount" and choose a password for the username you creted in the usees database.
 Now you can login with those username and password. 
 

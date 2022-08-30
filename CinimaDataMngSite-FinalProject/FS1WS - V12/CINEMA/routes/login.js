@@ -12,17 +12,11 @@ global.refresh = true
 router.get('/', async function(req, res, next) {
   console.log("login.js- / ")
   if(req.session.authenticated){
-    let id = req.session.userId 
     let transLeft = req.session.transLeft
     if(transLeft == 0){
       loginMsg = "no credits left, please come back tommorow"
       refresh = false
     }
-    let temp = await usersBL.updateTrans(id, transLeft)
-    //req.session.destroy((err) => {
-    //if(err) throw err
-    //res.redirect("/")
- // })
   }
   else if(refresh){
     loginMsg = ""
@@ -45,7 +39,6 @@ router.post("/userData" ,async (req, res) => {
         req.session.cookie.expires = Number(loginData.SessionTimeOut)*60000
         req.session["userName"] = userName
         
-        //req.session.save()
         loginMsg = ""
         res.redirect("/menu")
       }

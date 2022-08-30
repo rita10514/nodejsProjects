@@ -47,7 +47,7 @@ Now you can log in with the username and password according to your users' datab
 
 When the Admin adds a new user, he decides what will be his username. 
 
-When the new employee wants to log in, he first needs to sign up by clicking on "Sign Up" On the login page. Then he chooses a password for the username he received from the admin. He can log in After the sign-up is done.
+When the new employee wants to log in, he first needs to sign up by clicking on "Sign Up" On the login page. Then he chooses a password for the username he received from the admin. He can log in after the sign-up is done.
 
 <div align="center">
   <img align=center height="300"  src="https://i.imgur.com/uNQQnEn.png">&nbsp &nbsp

@@ -18,7 +18,7 @@ This is a node.js website for cinema employees where they can manage members’ 
 - **JSON Files:** users and permissions (first user (employee) will always be with all permissions)
 - **Rest-API:** manages a MongoDB database with 3 collections:
                 users, members (initiated with the external APIs), and subs  
-- MongoDB database of users(employees)                   
+- **MongoDB database** of users(employees)                   
 ---
 
 ## Setup

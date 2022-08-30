@@ -116,7 +116,13 @@ router.post('/searchMovie', async function(req, res, next) {
     let HelloUser = loginData[0]
     let per = loginData[1]
     let body = req.body
-    let movies = await moviesBL.searchResults(body.search_param,body.value,body.sort_param,body.order_param)
+    let {search_param, value, sort_param, order_param } = req.body
+    
+    search_param = search_param === undefined ? "All" : search_param;
+    sort_param = sort_param === undefined ? "Movie Name" : sort_param;
+    order_param = order_param === undefined ? "inc" : order_param;
+
+    let movies = await moviesBL.searchResults(search_param, value, sort_param, order_param)
     res.render('movies', {movies,body,HelloUser,per});
   }
   else{
@@ -125,7 +131,4 @@ router.post('/searchMovie', async function(req, res, next) {
 });
 
 module.exports = router;
-
-
-
 

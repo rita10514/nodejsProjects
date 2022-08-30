@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+      <%- include('../tamplates/head.html') %>
+    
+      <%- include('../tamplates/checkBox.html') %>
+    
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+    <h1>User Management</h1>
+    <h3>Add User</h3>
+    <form action="/userMng/saveUser" method="post" class="addUser">
+      <% let user ={} %>
+      <%- include('../tamplates/userData.ejs' , {user, add: true}) %>
+      
+      <input type="submit"  value="save">
+
+      <form action="/userMng" method="get">
+        <input type="submit" value="cancel" >
+      </form> 
+      
+    </form>
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

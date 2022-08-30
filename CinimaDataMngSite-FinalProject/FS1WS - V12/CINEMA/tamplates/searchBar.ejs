@@ -1,0 +1,60 @@
+<% let def = false %>
+<% function toSelect(option,value) { %>
+    <% let ans = "" ; %>
+    <% if(option == undefined && def == false) {ans = "Selected" ; def = true; %>
+    <% } else if(option == value ) {ans = "Selected"; };  %>
+    <% return ans; %>
+<%}%>
+
+<div class="justify-content-center">
+  <h3 class="text-center">Manage Users</h3>
+  <div class="container justify-content-center">
+      <div class="row">
+          <div class="col-xs-8 col-xs-offset-2">
+              <form action="/movies/searchMovie" method="post" id="searchForm" class="input-group">
+                  
+                  <div class="input-group-btn search-panel ">
+                      <label for="search_param"></label>
+                      <select name="search_param" id="search_param" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'Search by')%> disabled>Search by</option>  
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'All')%> value="All">All</option>
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'Movie Name')%> value="Movie Name">Movie Name</option>
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'Genres')%> value="Genres">Genres</option>
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'Year')%> value="Year">Year</option>
+                          <option class ="bg-light text-secondary" <%=toSelect(body.search_param,'Subscriber Name')%> value="Subscriber Name">Subscriber Name</option>
+                      </select>
+                  </div>
+                  <% def = false %>
+                  <div class="input-group-btn search-panel ">
+                    <label for="search_param"></label>
+                    <select name="sort_param" id="sort_param" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                        <option class ="bg-light text-secondary" <%=toSelect(body.sort_param,"Sort by")%> disabled>Sort by</option>  
+                        <option class ="bg-light text-secondary" <%=toSelect(body.sort_param,"Movie Name")%> value="Movie Name">Movie Name</option>
+                        <option class ="bg-light text-secondary" <%=toSelect(body.sort_param,"Premiered Date")%> value="Premiered Date">Premiered Date</option>
+                    </select>
+                </div>
+                <% def = false %>
+                <div class="input-group-btn search-panel ">
+                    <label for="search_param"></label>
+                    <select name="order_param" id="order_param" class="btn btn-secondary dropdown-toggle btnSort" data-toggle="dropdown">
+                        <option class ="bg-light text-secondary" <%=toSelect(body.order_param,"Order")%> disabled>Order</option> 
+                        <option class ="bg-light text-secondary" <%=toSelect(body.order_param,"inc")%> value="inc">Increasing</option> 
+                        <option class ="bg-light text-secondary" <%=toSelect(body.order_param,"dec")%> value="dec">Decreasing</option>
+                        
+                        
+                    </select>
+                </div>
+                <% let value %>
+                <% if(body.value == undefined) {value="" %>
+                <% }else value = body.value %>
+                  <input id = "serchInput" type="text" class="form-control rounded " name="value" placeholder="Search..." value=<%=value%>>
+                  <span class="input-group-btn">
+                        
+                        <button type="submit" class="btn btn-secondary"><i class="fa fa-search" ></i></button>
+                      
+                  </span>
+              </form><!-- end form -->     
+          </div><!-- end col-xs-8 -->       
+      </div><!-- end row -->  
+  </div><!-- end container -->    
+</div><!-- end col-md-9 -->

@@ -7,37 +7,39 @@ This is a node.js website for cinema employees where they can manage members’ 
 ## Features
 - add, update, and delete data
 - access management
-- Search and sort movies
+- search and sort movies
 - login and register (only employees that were added by the admin can register)
 - route protection using sessions
-- includes automatic logout after a period that is predetermined individually for each user
+- includes individuall session time out for each user
 
 
 #### Data Structure:
-- **External Rest-APIs:** initial members and movies data
-- **JSON Files:** users and permissions (first user (employee) will always be with all permissions)
+- **2 Rest-APIs from [jsonplaceholder](jsonplaceholder.typicode.com):** initial members and movies data
+- **2 JSON Files:** users and permissions (first user (the admin) will always be with all permissions)
 - **Rest-API:** manages a MongoDB database with 3 collections:
-                users, members (initiated with the external APIs), and subs  
+                users, members (initiated with the APIs from jsonplaceholder), and subs (empty at first run)  
 - **MongoDB database** of users(employees)                   
 ---
 
 ## Setup
-Create a MongoDB database called usersDB and add a user as shown below:
+You can use [studio3t](https://studio3t.com/download/) for the following steps.
+
+Create a MongoDB database called usersDB and add a user. use the example below:
 
 ![usersDB](https://i.imgur.com/rssibm1.png)
 
 This will be the Admin of the website.
 
-Go to CINEMA\data\users.JSON and change the user id according to your database.
+Go to \data\users.JSON and change the user id according to your database.
+
+![replaceId](https://i.imgur.com/U5cW6IE.png)
 
 Create a MongoDB database called cinemaDB with the 3 following collections:
 
 ![CinemaDB](https://i.imgur.com/zlKjvhZ.png) 
 
-You can use Robo 3T for this.
-
 This project consists of two directories: client-side and Rest-API, both need to run at the same time.
-Open each directory in VS Code, cd to the root directory if needed, and run `npm install` for each, to install all the dependencies.
+Open each directory in VS Code and run `npm install` for each, to install all the dependencies.
 
 ---
 
@@ -57,6 +59,8 @@ When the new employee wants to log in, he first needs to sign up by clicking on 
 ---
 
 ## Preview
-https://giphy.com/channel/rita10514/preview
+<div align="center">
+  <img align=center height="200"  src="https://i.imgur.com/hwgheqG.gifv?raw=true">&nbsp &nbsp
+</div>
 
 

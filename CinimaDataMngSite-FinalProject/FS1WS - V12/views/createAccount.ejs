@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Create Account</h1>
+    <form action="/savepsw" method='post'>
+      <label for="userName">User Name: </label>
+      <input required name="userName" type="text"><br><br>
+      <label for="psw">Password: </label>
+      <input required name="psw" type="password"><br><br>
+      
+      <div><%= msg %></div>
+      <input type="submit" value="Create">
+      <input type="button" value="back" onclick="location.href='/'">
+    </form><br>
+   
+   
+
+
+  </body>
+</html>

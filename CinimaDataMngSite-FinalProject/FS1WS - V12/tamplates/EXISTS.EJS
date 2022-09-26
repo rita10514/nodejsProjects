@@ -1,0 +1,8 @@
+
+<% function exists(member,movie){ %>
+  <% let ans = true %>
+  <% member.Movies.forEach(e => { %>
+    <%  if(e.movieId == movie._id){ans=false} %>
+  <% }) %>
+  <% return ans %>
+<% } %>

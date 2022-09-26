@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+
+  <div class="topMargin buttomMargin">
+    <% users.forEach( x => { %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Name: <%= x.fName %> <%= x.lName %> </h5>
+          <h6 class="card-subtitle mb-2 text-primary">User Name: <%= x.UserName %> </h6>
+          <p class="card-text">
+            <label for="CD">Created Date: </label>
+            <span name="CD"><%= x.CreatedData %></span> 
+            <label for="sess">session time out (in minutes):</label>
+            <span name="sess"><%= x.SessionTimeOut %></span> 
+            <p class="Permissions"> Permissions: </p>
+            <div class="Permissions">
+              <% x.Permissions.forEach( y => { %>
+                <li><%= y %></li>
+              <% }) %>
+            </div><br>
+
+            <a href="userMng/editUser/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">edit</a>
+            <% if(userId =! x.id){ %>
+              <a href="userMng/deleteUser/<%= x.id %>" class="btn btn-outline-secondary" role="button" aria-pressed="true">delete</a>
+            <% } %>
+          </p>
+        </div>
+      </div>
+    <% }) %>
+  </div>  
+
+    
+   
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

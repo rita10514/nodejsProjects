@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+
+    
+    <form action="/movies/updateMovie/<%= movie._id %>" method="post" class="addMovie topMargin">
+
+      <%- include('../tamplates/movieData.ejs', {movie, add: false}) %>
+      
+      <input type="submit"  value="save" onclick="history.back()">
+
+      <form action="/movies" method="get">
+        <input type="submit" value="cancel" onclick="history.back()" >
+      </form> 
+
+    </form>
+    
+    
+   
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

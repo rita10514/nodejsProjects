@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%- include('../tamplates/head.html') %>
+    <link rel='stylesheet' href='/stylesheets/card.css' />
+  </head>
+  <body>
+    <%- include('../tamplates/header.ejs') %>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <% for(var i=1 ; i<movies.length/4-1 ; i++){ %>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= i %>" aria-label="Slide <%= i+1 %>"></button>
+        <%}%>
+      </div>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="tumNailsWrapper">
+            <img src="<%= movies[0].Image %>" class=" d-none d-md-block  Cim" >
+            <img src="<%= movies[1].Image %>" class=" d-none d-md-block  Cim" >
+            <img src="<%= movies[2].Image %>" class="   Cim" >
+            <img src="<%= movies[3].Image %>" class="   Cim" >
+          </div>
+          
+        </div>
+        <% let sliceM = movies.slice(3) %>
+        <% for(var i=1 ; i<sliceM.length-3 ; i+=4){ %>
+        <div class="carousel-item">
+          <div class="tumNailsWrapper">
+            <img src="<%= sliceM[i].Image %>" class="d-none d-md-block  Cim" >
+            <img src="<%= sliceM[i+1].Image %>" class="d-none d-md-block  Cim" >
+            <img src="<%= sliceM[i+2].Image %>" class="  Cim" >
+            <img src="<%= sliceM[i+3].Image %>" class="  Cim" >
+          </div>
+        </div>
+
+        <%}%>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <%- include('../tamplates/footer.html') %>
+  </body>
+</html>

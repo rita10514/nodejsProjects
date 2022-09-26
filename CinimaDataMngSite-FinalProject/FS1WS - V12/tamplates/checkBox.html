@@ -1,0 +1,49 @@
+<script>
+
+function checkF(id){
+    console.log(id)
+    if(!id.includes("View")){
+        
+        let viewSubbg = document.getElementById("ViewSubscriptionsbg");
+        let viewMoviebg = document.getElementById("ViewMoviesbg");
+        let viewSub = document.getElementById("View Subscriptions");
+        let viewMovie= document.getElementById("View Movies");
+        let current = document.getElementById(id);
+
+        if(id.includes("Subscriptions")){
+            viewSub.checked = "checked"
+            if(nonChecked("Subscriptions"))
+                viewSubbg.style["z-index"] = 0
+            else
+                viewSubbg.style["z-index"] = 3
+        }
+        else{
+            viewMovie.checked = "checked"
+            if(nonChecked("Movies"))
+                viewMoviebg.style["z-index"] = 0
+            else
+                viewMoviebg.style["z-index"] = 3
+        }
+    }
+
+}
+
+
+function nonChecked(type ){
+   
+   let optionList =  ["Create", "Delete", "Update"]  
+   let ans = true
+   optionList.forEach(x => {
+       let id = x + " " + type 
+       //console.log(id)
+       let current = document.getElementById(id);
+       if(current.checked){
+        ans = false
+       }
+   }) 
+   //console.log(ans)
+   return ans
+}
+
+
+</script>

@@ -1,0 +1,31 @@
+<% function search(){
+        
+   <% let input = document.getElementById("serchInput");
+    <% let inputValue = input.value; %>
+    let filterBy = document.getElementById("search_param").value;
+     
+    var result = [] 
+    console.log(input,filterBy)
+    console.log("<%= movies[0].id %>")
+    
+    switch(filterBy){
+      case ('Name') :
+       <% result = movies.filter(x => x.Name.includes(inputValue)) %>
+        break
+      case ('Year') :
+        result = m.filter(x => x.Premiered.includes(input))
+        break  
+      case ('Genres') :
+        result = m.filter(x => x.Genres.includes(input))
+        break
+      case ('Subscriber Name') :
+        result = m.filter(x => x.Subs.includes(input))
+        break  
+    }
+
+    result.forEach( x=> {
+      document.getElementById(x.id).style.display = "none"
+
+    })
+
+  }

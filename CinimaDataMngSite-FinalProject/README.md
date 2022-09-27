@@ -60,7 +60,7 @@ When the new employee wants to log in, he first needs to sign up by clicking on 
 
 ## Preview
 <div align="center">
-  <img align=center height="600"  src="https://media.giphy.com/media/v7fN7IPJCD3uCT0DL6/giphy.gif">
+  <img align=center height="500"  src="https://media.giphy.com/media/v7fN7IPJCD3uCT0DL6/giphy.gif">
 </div>
 
 
